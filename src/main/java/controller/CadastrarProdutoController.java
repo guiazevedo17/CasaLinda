@@ -105,7 +105,7 @@ public class CadastrarProdutoController {//implements Initializable {
         window.centerOnScreen();
         window.show();
         return;
-      } 
+      }
 
 
       try {
