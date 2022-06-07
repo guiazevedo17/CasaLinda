@@ -105,35 +105,7 @@ public class CadastrarProdutoController {//implements Initializable {
         window.centerOnScreen();
         window.show();
         return;
-      } else if(eNumero(txtPrecoCusto.getText()) == false){
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setTitle("CASA LINDA - Cadastro Negado");
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/cadastroNegado.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-
-        scene.getStylesheets().add(getClass().getResource("../css/style.css").toExternalForm());
-        window.setScene(scene);
-        
-        window.centerOnScreen();
-        window.show();
-        return;
-      } else if(eNumero(txtPrecoVenda.getText()) == false){
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setTitle("CASA LINDA - Cadastro Negado");
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../fxml/cadastroNegado.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root);
-
-        scene.getStylesheets().add(getClass().getResource("../css/style.css").toExternalForm());
-        window.setScene(scene);
-        
-        window.centerOnScreen();
-        window.show();
-        return;
-      }
+      } 
 
 
       try {
