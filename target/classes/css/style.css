@@ -1,0 +1,11 @@
+.root{
+	-fx-background-color: #ECCCAD;
+}
+
+#btnCadastrarProduto, #btnChecarEstoque, #btnGerarRelatorio, #btnRealizarVenda{
+	-fx-background-color: #B3E3F8;
+}
+
+#lblTitulo{
+	-fx-font-family: 'Comic Sans MS';
+}

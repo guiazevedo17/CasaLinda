@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GerarRelatorioController">
+   <children>
+      <Button fx:id="btnRetorna" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" onAction="#retornaMenu" prefHeight="25.0" prefWidth="24.0" />
+      <TableView fx:id="tbRelatorio" layoutX="10.0" layoutY="74.0" prefHeight="363.0" prefWidth="387.0">
+        <columns>
+          <TableColumn fx:id="tbclmCod" editable="false" prefWidth="31.0" resizable="false" sortable="false" text="cod" />
+          <TableColumn fx:id="tbclmNome" prefWidth="50.0" sortable="false" text="nome" />
+            <TableColumn fx:id="tbclmQuantia" editable="false" prefWidth="33.0" resizable="false" sortable="false" text="qntd" />
+            <TableColumn fx:id="tbclmStatus" minWidth="1.0" prefWidth="71.0" resizable="false" sortable="false" text="status" />
+            <TableColumn fx:id="tbclmDia" editable="false" prefWidth="28.0" resizable="false" text="dia" />
+            <TableColumn fx:id="tbclmMes" editable="false" prefWidth="28.0" resizable="false" text="mes" />
+            <TableColumn fx:id="tbclmAno" editable="false" prefWidth="40.0" resizable="false" text="ano" />
+            <TableColumn fx:id="tbclmPagamento" editable="false" prefWidth="50.0" resizable="false" sortable="false" text="pgmnto" />
+            <TableColumn fx:id="tbclmValor" editable="false" prefWidth="55.0" resizable="false" sortable="false" text="valor" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="cbTipo" layoutX="50.0" layoutY="30.0" onAction="#selecionaTipoRelatorio" prefWidth="150.0" />
+      <ComboBox fx:id="cbOpcoes" layoutX="235.0" layoutY="30.0" onAction="#geraRelatorio" prefWidth="150.0" />
+      <Label alignment="CENTER" layoutX="50.0" layoutY="4.0" prefHeight="23.0" prefWidth="150.0" text="Tipo">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="235.0" layoutY="4.0" prefHeight="23.0" prefWidth="150.0" text="Opções">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagens/return.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
