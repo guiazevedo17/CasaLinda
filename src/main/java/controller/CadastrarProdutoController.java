@@ -107,6 +107,7 @@ public class CadastrarProdutoController {//implements Initializable {
         return;
       }
 
+      // Passou por todas as verificações de número
 
       try {
       produto.setDia(Integer.parseInt(txtDia.getText())); // Dia
