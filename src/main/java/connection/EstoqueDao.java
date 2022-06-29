@@ -29,24 +29,6 @@ public class EstoqueDao {
 		}
 	}
 
-	public ResultSet procuraProdutoEstoque(String nome){ // Procura produto com 'nome' no estoque
-		Connection connection =  new ConexaoDao().conectaDataBase();
-
-		try {			
-			String query = "select * from estoque where nome = '" +nome+ "'";
-			
-			PreparedStatement statement = connection.prepareStatement(query);
-			
-			ResultSet rs = statement.executeQuery();
-			
-			return rs;
-		} catch (SQLException throwables) {
-			
-			throwables.printStackTrace();
-			return null;
-		}
-	}
-
 	public ResultSet listEstoque(Estoque estoque){ // Lista todos os produtos na tabela ESTOQUE
 		Connection connection =  new ConexaoDao().conectaDataBase();
 

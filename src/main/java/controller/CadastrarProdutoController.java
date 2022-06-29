@@ -165,9 +165,8 @@ public class CadastrarProdutoController {//implements Initializable {
           window.show();
           return;
         } else { // caso não exista confirma o cadastro do produto
-
-        }
-        /* Printa tela de confirmação de cadastro */
+        
+          /* Printa tela de confirmação de cadastro */
           Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow(); 
           window.setTitle("CASA LINDA - Confirmação de Cadastro");
   
@@ -180,6 +179,7 @@ public class CadastrarProdutoController {//implements Initializable {
           
           window.centerOnScreen();
           window.show();
+        }
 
       } catch (Exception e) {
         
@@ -188,7 +188,7 @@ public class CadastrarProdutoController {//implements Initializable {
       EstoqueDao daoEstq = new EstoqueDao();
       daoEstq.adicionaProdutoEstoque(produto); // adiciona Produto ao Estoque
 
-      ResultSet rsdaoEstq = daoEstq.procuraProdutoEstoque(produto.getNome()); // Produto do Estoque que acabou de ser adicionado (Estoque)    
+      ResultSet rsdaoEstq = daoEstq.verificaNome(produto.getNome()); // Produto do Estoque que acabou de ser adicionado (Estoque)    
       MovimentacaoDao daoMov = new MovimentacaoDao();
 
       if(rsdaoEstq.next()){
